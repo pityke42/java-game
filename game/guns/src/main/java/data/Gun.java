@@ -7,10 +7,11 @@ public abstract class Gun {
     protected int magSize;
     protected int shootingRange;
     protected int damage;
-    protected  float fireRate;
+    protected float fireRate;
     protected int accuracy;
     protected int reloadTime;
     protected int weight;
+    protected int id;
 
     public int getWeight() {
         return weight;
@@ -68,15 +69,26 @@ public abstract class Gun {
         this.reloadTime = reloadTime;
     }
 
-    public void setModel(String model){
+    public void setModel(String model) {
         this.model = model;
     }
-    public String getModel(){
+
+    public String getModel() {
         return this.model;
     }
+
     abstract GunType getType();
+
     @Override
-    public String toString(){
+    public String toString() {
         return this.model + " " + this.getType();
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }
