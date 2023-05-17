@@ -32,7 +32,14 @@ public class Main {
                 }
                 else if (Integer.valueOf(2).equals(currentLine.get(x))) {
                     System.out.print("x ");
-                } else {
+                }
+                else if(Integer.valueOf(3).equals(currentLine.get(x))){
+                    System.out.print("ammo");
+                }
+                else if(Integer.valueOf(4).equals(currentLine.get(x))){
+                    System.out.print("armor");
+                }
+                else {
                     System.out.print(service.getGunById(guns, currentLine.get(x)).getModel() + " ");
                 }
             }
@@ -46,3 +53,7 @@ public class Main {
 // ammo types
 //shoes, shoes types more movement speed, lower stamina loss
 //shield, shield types, reducing damage, less weigth -> lower stamina loss, damage reduction, more weigth -> more damage reduction, more stamina loss
+
+
+//3-as ammo
+//4-es armor-->else ifekbe
